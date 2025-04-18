@@ -1,0 +1,131 @@
+/* Container margin */
+.cart {
+  margin-top: 100px;
+  padding: 0 20px;
+}
+
+/* Header Row */
+.cart-items-title {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  color: gray;
+  font-size: max(1vw, 12px);
+  padding: 10px 0;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Individual item row */
+.cart-items-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-items-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Remove (x) icon */
+.cross {
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Cart Bottom Section */
+.cart-bottom {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: max(12vw, 20px);
+  flex-wrap: wrap;
+}
+
+/* Totals section */
+.cart-total {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 300px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  font-size: 16px;
+}
+
+.cart-total hr {
+  margin: 10px 0px;
+}
+
+.cart-total button {
+  border: none;
+  color: white;
+  background-color: tomato;
+  width: max(15vw, 200px);
+  padding: 12px 0px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-total button:hover {
+  background-color: #e63939;
+}
+
+/* Promo code section */
+.cart-promocode {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cart-promocode-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cart-promocode-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.cart-promocode-input button {
+  padding: 10px 20px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-promocode-input button:hover {
+  background-color: tomato;
+}
+
+@media (max-width:750px) {
+  .cart-bottom{
+    flex-direction: column-reverse;
+  }
+  .cart-promocode{
+    justify-content: start;
+  }
+  
+}
